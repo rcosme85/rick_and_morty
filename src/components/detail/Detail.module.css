@@ -1,0 +1,26 @@
+.container {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    /* margin: auto; */
+    width: 140px;
+    height: 280px;
+    box-shadow: 0 0 10px black;
+}
+
+.container img {
+    width: 130px;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px black;
+    margin-top: 15px;
+}
+
+.dataContainer h2 {
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    color: darkslategray
+}
+.dataContainer {
+    text-align: center;
+    padding: 5px;
+}
