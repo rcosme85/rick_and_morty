@@ -7,7 +7,7 @@ export default function Cards({ characters, onClose }) {
     justifyContent: "space-evenly",
   };
 
-  console.log(characters);
+  //console.log(characters);
   return (
     <div style={cardsContainer}>
       {characters.map((character) => (

@@ -23,7 +23,7 @@ export default function Detail(props) {
   return (
     // <div style={{ backgroundColor: "lightgray" }}>
     <div className={styles.container}>
-      c<h1> DETAIL</h1>
+      <h1> DETAIL</h1>
       <h2>className={ styles.dataContainer.h2}{character.name}</h2>
       <div className={styles.dataContainer}>
         <h3>Status | {character.status}</h3>
