@@ -5,9 +5,12 @@ export default function SearchBar(props) {
   const [id, setId] = useState("");
 
   const handleChange = (event) => {
+   // event.preventDefault()
     const { value } = event.target;
     setId(value);
-    console.log("id: ", id);
+    //console.log("id: ", id);
+   // setId("")
+    
   };
 
   return (

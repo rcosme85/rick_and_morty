@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import styles from "./Detail.module.css"
+import styles from "./Detail.module.css";
 
 export default function Detail(props) {
   const { id } = useParams();
-  const [character, setCharacter] = useState("")
+  const [character, setCharacter] = useState("");
 
   useEffect(() => {
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(
@@ -23,8 +23,8 @@ export default function Detail(props) {
   return (
     // <div style={{ backgroundColor: "lightgray" }}>
     <div className={styles.container}>
-      <h1> DETAIL</h1>
-      <h2>className={ styles.dataContainer.h2}{character.name}</h2>
+      <h1> DETAIL - ID: {character.id}</h1>
+      <h2 className={styles.dataContainer.h2}>{character.name}</h2>
       <div className={styles.dataContainer}>
         <h3>Status | {character.status}</h3>
         <h3>Specie | {character.species}</h3>

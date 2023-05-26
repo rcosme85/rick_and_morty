@@ -1,26 +1,55 @@
 .container {
-    padding-top: 20px;
-    padding-bottom: 15px;
-    /* margin: auto; */
-    width: 140px;
-    height: 280px;
+    /* border: 0px solid grey; */
+    background-color: darkgray;
+    border-radius: 10px;
+    width: 400px;
+    height: 480px;
+    margin: 50px;
+    padding: 10px;
     box-shadow: 0 0 10px black;
+    &:hover {
+        box-shadow: 0 0 5px grey;
+    }
 }
 
 .container img {
     width: 130px;
     border-radius: 5px;
     box-shadow: 0 5px 5px black;
-    margin-top: 15px;
+    margin-top: 2px;
 }
 
-.dataContainer h2 {
-    text-align: center;
-    padding: 5px;
-    font-size: 18px;
-    color: darkslategray
+.buttonContainer {
+    display: flex;
+    justify-content: end;
 }
+
+.buttonContainer button {
+    margin: 2px 2px 0 0;
+    border-radius: 3px;
+    background-color: pink;
+    color: red;
+    box-shadow: 0 2px 2px black;
+    &:hover {
+        background-color: red;
+        color: pink;
+        box-shadow: 0 2px 2px white;
+    }
+}
+
 .dataContainer {
     text-align: center;
     padding: 5px;
+}
+
+.dataContainer h2 {
+    margin: 2px;
+    font-size: 15px;
+    color: darkslategray
+}
+
+.dataContainer h4 {
+    margin: 2px;
+    font-size: 10px;
+    color: darkslategray
 }

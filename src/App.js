@@ -31,6 +31,9 @@ function App() {
 
   const onSearch = (id) => {
     // 2 => { id: 2 }
+    const characterId = characters.filter(character =>character.id === Number(id))
+    if (characterId.length) return alert("The character ya existe!!")
+    if(id < 1 || id >826) return alert ("No hay character con ese número")
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(
       ({ data }) => {
         // console.log(data);

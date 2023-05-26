@@ -37,7 +37,8 @@ function Card(props) {
       <Link to={`/detail/${props.id}`}>
         <div className={styles.dataContainer}>
           <h2 className={styles.dataContainer.h2}>{props.name}</h2>
-          <h4 lassName={styles.dataContainer.h4}>{props.status}</h4>
+          <h4>{props.id}</h4>
+          <h4 className={styles.dataContainer.h4}>{props.status}</h4>
           <h4>{props.species}</h4>
           <h4>{props.gender}</h4>
           <h4>{props.origin}</h4>
