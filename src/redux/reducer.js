@@ -13,7 +13,7 @@ export default function reducer(state = initialState, { type, payload }) {
       allCharactersFav: [...state.allCharactersFav, payload],
     }; */
     case ADD_FAV:
-      return { ...state, myFavorites: payload, allCharacters: payload, errors: false };
+      return { ...state, myFavorites: payload, allCharactersFav: payload, errors: false };
     case "ERROR":
       return{...state, errors:payload}
 
@@ -36,7 +36,8 @@ export default function reducer(state = initialState, { type, payload }) {
         ...state,
         myFavorites:
           payload === "All"
-            ? [...state.allCharactersFav]
+            ? // ? [...state.allCharactersFav]
+              [...state.allCharactersFav]
             : allCharactersFavFilter,
       };
     case ORDER:

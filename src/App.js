@@ -56,11 +56,12 @@ function App() {
   const onSearch = async (id) => {
     try {
       // para evitar duplicados
-      const characterId = characters.filter((character) => character.id === Number(id));
+      const characterId = characters.filter((character) => character.id === id);
       if (characterId.length) return alert("The character ya existe!!");
       if (id < 1 || id > 826) return alert("No hay character con ese número");
 
       const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+      
       if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
         } else {
