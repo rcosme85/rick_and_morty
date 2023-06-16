@@ -9,9 +9,16 @@ http.createServer(function (req, res) {
      getCharById(res, +id)
   } 
 }).listen(PORT, "localhost")  */
-const server = require('../src/app')
+const { conn } = require("./DB_connection");
+const server = require('../src/app');
+//const { sequelize } = require("sequelize");
 const PORT = 3001
 
-server.listen(PORT, () => {
-  console.log("server raised in port: " + PORT);
-});
+conn.sync({ force: true })
+  .then(() => {
+    server.listen(PORT, () => {
+      console.log("server raised in port: " + PORT);
+    });
+  })
+  .catch(error => console.log(error.message))
+
